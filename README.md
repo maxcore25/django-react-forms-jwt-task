@@ -11,6 +11,7 @@
     - [Development](#development)
   - [Documentation](#documentation)
     - [Test Accounts](#test-accounts)
+  - [License](#license)
 
 ## Description
 
@@ -105,3 +106,7 @@ Backend runs here - [http://localhost:8000](http://localhost:8000 "Backend URL")
 - User
   - Login - `user@test.com`
   - Password - `user`
+
+## License
+
+- [MIT](LICENSE)
