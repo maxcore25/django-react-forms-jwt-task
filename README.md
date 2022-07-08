@@ -22,8 +22,8 @@ This project provides test form authorization using React.js, JWT, react-hook-fo
   [![React.js](https://img.shields.io/badge/React.js-black?logo=react&logoColor=61DAFB)](https://reactjs.org/)
   [![Sass](https://img.shields.io/badge/Sass-hotpink?logo=sass&logoColor=white)](https://sass-lang.com/)
 - Backend:
-  [![Django](https://img.shields.io/badge/django-%23092E20?logo=django&logoColor=white)](https://docs.djangoproject.com/en/4.0/)
-  [![PostgreSQL](https://img.shields.io/badge/postgres-%23316192?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+  [![Django](https://img.shields.io/badge/Django-%23092E20?logo=django&logoColor=white)](https://docs.djangoproject.com/en/4.0/)
+  [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23316192?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
   [![JWT](https://img.shields.io/badge/JWT-black?logo=JSON%20web%20tokens&logoColor=white)](https://www.postgresql.org/)
 
 ## Functionality
