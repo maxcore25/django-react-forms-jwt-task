@@ -10,7 +10,7 @@
   - [Build](#build)
     - [Development](#development)
   - [Documentation](#documentation)
-  - [Test Accounts](#test-accounts)
+    - [Test Accounts](#test-accounts)
 
 ## Description
 
@@ -96,7 +96,7 @@ Backend runs here - [http://localhost:8000](http://localhost:8000 "Backend URL")
 
 'core' - Backend main folder.
 
-## Test Accounts
+### Test Accounts
 
 - Admin
   - Login - `admin@test.com`
