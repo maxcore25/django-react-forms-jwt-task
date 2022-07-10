@@ -1,14 +1,21 @@
 import { createContext, useState, useEffect } from 'react';
 import jwt_decode from 'jwt-decode';
-
 const AuthContext = createContext();
 
 export default AuthContext;
 
 // it's better to write this fragment in separate component
 export const AuthProvider = ({ children }) => {
-  let [user, setUser] = useState(null);
-  let [authTokens, setAuthTokens] = useState(null);
+  let [user, setUser] = useState(
+    localStorage.getItem('authTokens')
+      ? jwt_decode(localStorage.getItem('authTokens'))
+      : null
+  );
+  let [authTokens, setAuthTokens] = useState(
+    localStorage.getItem('authTokens')
+      ? JSON.parse(localStorage.getItem('authTokens'))
+      : null
+  );
 
   let LoginUser = async e => {
     e.preventDefault();
@@ -29,6 +36,7 @@ export const AuthProvider = ({ children }) => {
     if (response.status === 200) {
       setAuthTokens(data);
       setUser(jwt_decode(data.access));
+      localStorage.setItem('authTokens', JSON.stringify(data));
     } else {
       alert('Something went wrong');
     }
@@ -36,9 +44,16 @@ export const AuthProvider = ({ children }) => {
     console.log('response:', response);
   };
 
+  let logoutUser = () => {
+    setAuthTokens(null);
+    setUser(null);
+    localStorage.removeItem('authTokens');
+  };
+
   let contextData = {
     user: user,
     LoginUser: LoginUser,
+    logoutUser: logoutUser,
   };
 
   return (
