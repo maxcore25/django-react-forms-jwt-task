@@ -38,7 +38,7 @@ function LoginPage() {
             {...register('password', {
               required: 'Enter your password',
               minLength: {
-                value: 5,
+                value: 4,
                 message: 'korotkovat',
               },
             })}
