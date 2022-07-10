@@ -3,9 +3,6 @@ import AuthContext from '../context/AuthContext';
 
 function LoginPage() {
   let { LoginUser } = useContext(AuthContext);
-  let { name } = useContext(AuthContext);
-
-  console.log(LoginUser, name);
 
   return (
     <div>
