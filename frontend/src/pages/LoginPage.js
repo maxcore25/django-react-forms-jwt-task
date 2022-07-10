@@ -9,13 +9,22 @@ function LoginPage() {
     register,
     formState: { errors },
     handleSubmit,
+    watch,
+    reset,
   } = useForm({
     mode: 'onBlur',
   });
 
+  const onClick = () => {
+    const name = watch('username');
+    const password = watch('password');
+    LoginUser(name, password);
+    reset();
+  };
+
   return (
     <div>
-      <form onSubmit={handleSubmit(LoginUser)}>
+      <form onSubmit={handleSubmit(onClick)}>
         <label>
           Name
           <input
@@ -35,6 +44,7 @@ function LoginPage() {
         <label>
           Password
           <input
+            type='password'
             {...register('password', {
               required: 'Enter your password',
               minLength: {
